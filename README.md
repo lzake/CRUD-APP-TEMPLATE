@@ -3,12 +3,9 @@
 ## Use this template to make a CRUD app.
 
 1. Fork and Clone this repository
-1.```sh
-$ npm install
-```
-1. ```sh
-$ createdb name_of_database
-```
+1. ```sh $ npm install```
+1. ```sh $ createdb name_of_database```
+
 IN YOUR TERMINAL, FIRST MAKE SURE YOU ARE IN YOUR 'server' FOLDER.
 
 # MAKE A MIGRATION
