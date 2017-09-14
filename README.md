@@ -95,3 +95,70 @@ Commands:
 - GET /movies/:id  _show a movie_
 - PUT /movies/:id _edit a movie_
 - DELETE /movies/:id _delete a movie_
+
+
+# DEPLOY TO HEROKU
+
+## Install the herkou CLI
+```sh
+brew install heroku
+```
+
+## Signup and login to heroku
+```sh
+heroku login
+```
+## Create a heroku app
+```sh
+heroku create
+```
+
+## Push to heroku
+git push heroku master
+
+## Open the URL from the command line
+heroku open
+
+## View heroku logs
+heroku logs --tail
+
+# Add Postgres DB to Heroku
+## Add postgres addon
+```sh
+heroku addons:create heroku-postgresql:hobby-dev
+```
+
+# Add production connection to knex
+
+## Add a production enviornment to the knex.js file in your root directory. The connection should be set to process.env.DATABASE_URL
+## Look in your db/knex.js file and ensure your connection variable is set to process.env.NODE_ENV || developement
+## Add a .env file
+## Download the npm package dotenv
+```sh
+npm install dotenv
+```
+
+## Require the pacakge in your knexfile.js
+## require('dotenv').config()
+
+## Make a .env file
+## touch .env
+
+## Add your .env file to your .gitignore file
+
+## Add your database url to your .env file
+
+## Find your app on heroku > settings > config variables
+## DATABASE_URL=<your database url here>
+
+# Run migrations on production DB
+
+## Use psql to examine tables and data on the production DB
+```sh
+heroku pg:psql
+```
+
+## Run seed on production DB
+```sh
+heroku run knex seed:run
+```
