@@ -112,17 +112,20 @@ heroku login
 ```sh
 heroku create
 ```
-
 ## Push to heroku
+```sh
 git push heroku master
-
+```
 ## Open the URL from the command line
+```sh
 heroku open
-
+```
 ## View heroku logs
+```sh
 heroku logs --tail
-
+```
 # Add Postgres DB to Heroku
+
 ## Add postgres addon
 ```sh
 heroku addons:create heroku-postgresql:hobby-dev
