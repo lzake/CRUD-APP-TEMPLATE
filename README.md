@@ -5,60 +5,65 @@
 
 ## Setup
 
+### Fork and Clone this repository
+
 ```sh
 npm install
 ```
 
-### Fork and Clone this repository
-
-```sh npm install```
-
-```sh createdb name_of_database```
-
-
+```sh
+createdb name_of_database
+```
 
 # MAKE A MIGRATION
 
 
 ## Go to your terminal, make sure you are in your 'server' directory, run:
-
-```sh knex migrate make: <name_of_your_migration_file>```
-
-```sh knex migrate make: create_movie```
+```sh
+knex migrate make: <name_of_your_migration_file>
+```
+```sh
+knex migrate make: create_movie
+```
 
 ## This will create a migrations directory and place a migration file inside of it.
 ## Go to the new migrations file that was just created and apply your knex schema functions.
 ## Apply your new migration, in the terminal, run:
 
-```sh knex migrate:latest```
+```sh
+knex migrate:latest
+```
 
 # CREATE A SEED
 
 ## After you have already made a migration, applied your desired knex schema functions to it, and 'knex migrated:latest', we need to create a seed for it. In your terminal, run:
 
 ```sh
-$ knex seed:make 01_<seed_name>
+knex seed:make 01_<seed_name>
 ```
-- i.e. ```sh knex seed:make 01_movie ```
+- i.e.
+```sh
+knex seed:make 01_movie
+```
 
 ## This will create a seeds directory and place a seed file inside of it.
 ## Go to the new seeds file that was just created and apply knex logic to populate your database   with test or seed data independent of your migration files.
 ## Apply your new migration, in the terminal, run:
 
 ```sh
-$ knex seed:run
+knex seed:run
 ```
 
 ## Repeat these steps as needed for your app:
 - First: migrate
 - Update that migration
 ```sh
-$ knex migrate:latest
+knex migrate:latest
 ```
 - Second: Seed
 - Update that seed
 ```sh
-$ knex seed:run
+knex seed:run
 ```
 
 # KNEX COMMANDS
