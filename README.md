@@ -2,13 +2,20 @@
 
 ## Use this template to make a CRUD app.
 
+
+## Setup
+
+```sh
+npm install
+```
+
 ### Fork and Clone this repository
 
 ```sh npm install```
 
 ```sh createdb name_of_database```
 
-IN YOUR TERMINAL, FIRST MAKE SURE YOU ARE IN YOUR 'server' FOLDER.
+
 
 # MAKE A MIGRATION
 
