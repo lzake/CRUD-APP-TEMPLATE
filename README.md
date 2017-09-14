@@ -3,8 +3,8 @@
 ## Use this template to make a CRUD app.
 
 1. Fork and Clone this repository
-1. ```sh $ npm install```
-1. ```sh $ createdb name_of_database```
+1. ```sh npm install```
+1. ```sh createdb name_of_database```
 
 IN YOUR TERMINAL, FIRST MAKE SURE YOU ARE IN YOUR 'server' FOLDER.
 
@@ -16,7 +16,7 @@ IN YOUR TERMINAL, FIRST MAKE SURE YOU ARE IN YOUR 'server' FOLDER.
 ```sh
 $ knex migrate make: <name_of_your_migration_file>
 ```
-- i.e. ```sh $ knex migrate make: create_movie```
+- i.e. ```sh knex migrate make: create_movie```
 
 ## This will create a migrations directory and place a migration file inside of it.
 ## Go to the new migrations file that was just created and apply your knex schema functions.
@@ -33,7 +33,7 @@ $ knex migrate:latest
 ```sh
 $ knex seed:make 01_<seed_name>
 ```
-- i.e. ```sh $ knex seed:make 01_movie ```
+- i.e. ```sh knex seed:make 01_movie ```
 
 ## This will create a seeds directory and place a seed file inside of it.
 ## Go to the new seeds file that was just created and apply knex logic to populate your database   with test or seed data independent of your migration files.
