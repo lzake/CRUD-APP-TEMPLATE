@@ -10,4 +10,9 @@ module.exports = {
       client: 'pg',
       connection: 'postgress://localhost/test-gmovie'
       },
+      // uncomment this for deploying to heroku
+      // production: {
+      // client: 'pg',
+      // connection: process.env.DATABASE_URL
+      // }
   };
